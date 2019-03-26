@@ -26,12 +26,14 @@ let arrayLength = 4;
 
 let randomSpeech = function () {
 let array = [];
+
+for (var ii=0; ii<50; ii++) {
                 for (var i = 1; i <= arrayLength; i++) {
                     let number = Math.floor(Math.random() * 10); 
                     var partElement = parts[i][number];
                     array.push(partElement);
                 }
-                
+                }
                array = array.toString();
                 array = array.split(',').join(" ");
                 document.getElementById("result").innerHTML = array;
