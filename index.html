@@ -5,7 +5,9 @@
 </head>
 <body>
 <div>Wybierz przycisk, żeby wygenerować przemówienie komunistyczne.</div>
-<button onclick="randomSpeech()">Generuj</button>
+<br>
+<button onclick="randomSpeech()">Generuj</button><br><br>
+
 <div id="result"></div>
 
 <script>
@@ -34,7 +36,7 @@ for (var ii=0; ii<50; ii++) {
                     array.push(partElement);
                 }
                 }
-               array = array.toString();
+               array = array.toString('');
                 array = array.split(',').join(" ");
                 document.getElementById("result").innerHTML = array;
                 }
