@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Generator przemówień komunistycznych</title>
 </head>
 <body>
 <div>Wybierz przycisk, żeby wygenerować przemówienie komunistyczne.</div>
@@ -15,10 +15,10 @@
 //number of elements in each part must be the same
 var parts = {
 
-'1':['Koleżanki i koledzy,','Z drugiej strony,','Podobnie','Nie zapominajmy jednak, że','W ten sposób','Praktyka dnia codziennego dowodzi, że','Wagi i znaczenia tych problemów nie trzeba szerzej uzasadniać, ponieważ','Różnorakie bogate doświadczenia','Troska organizacji, a szczególnie','Wyższe założenia ideowe, a także'],
-'2':['realizacja nakreślonych zadań programowych','zakres i miejsce szkolenia kadr','stały wzrost ilości i zakres naszej aktywności', 'aktualna struktura organizacji', 'nowy model działalności organizacyjnej', 'dalszy rozwój różnych form działalności', 'stałe zabezpieczenie informacyjno – propagandowe naszej działalności', 'wzmocnienie i rozwijanie struktur', 'konsultacja z szerokim aktywem', 'rozpoczęcie powszechnej akcji kształtowania postaw'],
+'1':['Koleżanki i koledzy{p}','Z drugiej strony{p}','Podobnie','Nie zapominajmy jednak, że','W ten sposób','Praktyka dnia codziennego dowodzi{p} że','Wagi i znaczenia tych problemów nie trzeba szerzej uzasadniać{p} ponieważ','Różnorakie bogate doświadczenia','Troska organizacji{p} a szczególnie','Wyższe założenia ideowe{p} a także'],
+'2':['realizacja nakreślonych zadań programowych','zakres i miejsce szkolenia kadr','stały wzrost ilości i zakres naszej aktywności', 'aktualna struktura organizacji', 'nowy model działalności organizacyjnej', 'dalszy rozwój różnych form działalności', 'stałe zabezpieczenie informacyjno–propagandowe naszej działalności', 'wzmocnienie i rozwijanie struktur', 'konsultacja z szerokim aktywem', 'rozpoczęcie powszechnej akcji kształtowania postaw'],
 '3':['zmusza nas do przeanalizowania','spełnia istotną rolę w kształtowaniu','wymaga sprecyzowania i określenia','pomaga w przygotowaniu i realizacji','zabezpiecza udział szerokiej grupie w kształtowaniu', 'spełnia ważne zadania w wypracowaniu', 'umożliwia w większym stopniu tworzenie', 'powoduje docenianie wagi', 'przedstawia interesującą próbę sprawdzenia', 'pociąga za sobą proces wdrażania i unowocześniania'],
-'4':['istniejących warunków administracyjno - finansowych. ', 'dalszych kierunków rozwoju. ', 'systemu powszechnego uczestnictwa. ', 'postaw uczestników wobec zadań stawianych przez organizację. ', 'nowych propozycji.', 'kierunków postępowego wychowania. ', 'systemu szkolenia kadr odpowiadającego potrzebom. ', 'odpowiednich warunków aktywizacji. ', 'modelu rozwoju. ', 'form oddziaływania. '],
+'4':['istniejących warunków administracyjno-finansowych. ', 'dalszych kierunków rozwoju. ', 'systemu powszechnego uczestnictwa. ', 'postaw uczestników wobec zadań stawianych przez organizację. ', 'nowych propozycji.', 'kierunków postępowego wychowania. ', 'systemu szkolenia kadr odpowiadającego potrzebom. ', 'odpowiednich warunków aktywizacji. ', 'modelu rozwoju. ', 'form oddziaływania. '],
 
 };
 
@@ -36,8 +36,10 @@ for (var ii=0; ii<50; ii++) {
                     array.push(partElement);
                 }
                 }
-               array = array.toString('');
+               array = array.toString();
                 array = array.split(',').join(" ");
+                array = array.split('{p}').join(",");
+               
                 document.getElementById("result").innerHTML = array;
                 }
 
